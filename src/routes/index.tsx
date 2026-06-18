@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav, Footer } from "@/components/Nav";
-import portrait from "@/assets/portrait.jpg";
+import portrait1 from "@/assets/portrait-1.jpg";
 import photo1 from "@/assets/photo-1.jpg";
 import scribble from "@/assets/scribble-1.jpg";
 
@@ -9,8 +9,9 @@ export const Route = createFileRoute("/")({
 });
 
 const stack = [
-  "TypeScript", "React", "Next.js", "TanStack", "Node", "Go", "PostgreSQL",
-  "Rust (learning)", "tRPC", "Tailwind", "Framer Motion", "Figma", "Swift",
+  "Angular", "React", "Bootstrap", "RxJS", "HTML5/CSS3", "JavaScript",
+  "Laravel", "PHP", "MySQL", "Oracle APEX", "Git/GitHub", "Python",
+  "C++", "REST APIs", "Figma", "Netlify"
 ];
 
 function Index() {
@@ -32,9 +33,9 @@ function Index() {
               <br />problems.
             </h1>
             <p className="mt-10 max-w-md text-sm leading-relaxed text-muted-foreground">
-              I'm Kiran — a software developer based in Kuala Lumpur. I make web
-              products, take photographs at strange hours, and occasionally
-              draw on napkins. This is a record of those things.
+              I'm Najwa — a computer science graduate based in Selangor. I build
+              front-end interfaces, dabble in steganography, and occasionally
+              take photos on 35mm. This is a record of those things.
             </p>
             <div className="mt-10 flex items-center gap-6 text-xs uppercase tracking-[0.2em]">
               <Link to="/work" className="px-5 py-3 bg-ink text-paper hover:bg-ember transition-colors">
@@ -46,10 +47,10 @@ function Index() {
 
           <div className="col-span-12 md:col-span-5 md:pt-12">
             <figure className="relative grain">
-              <img src={portrait} alt="Portrait silhouette" width={1024} height={1280} className="w-full h-auto object-cover aspect-[4/5] grayscale" />
+              <img src={portrait1} alt="Portrait of Najwa" width={1024} height={1280} className="w-full h-auto object-cover aspect-[4/5]" />
               <figcaption className="mt-3 text-[10px] uppercase tracking-[0.25em] text-muted-foreground flex justify-between">
-                <span>fig. 01 — self, by window</span>
-                <span>35mm · 2025</span>
+                <span>fig. 01 — self, by the sea</span>
+                <span>35mm · 2026</span>
               </figcaption>
             </figure>
           </div>
@@ -79,11 +80,11 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-7 md:col-start-6 grid gap-8">
             {[
-              { k: "Reading", v: "‘A Pattern Language’ — Christopher Alexander" },
-              { k: "Building", v: "A small CLI for organising film negatives" },
-              { k: "Listening", v: "Nils Frahm · Hania Rani · old Bon Iver" },
-              { k: "Drinking", v: "Single-origin Ethiopian, V60, no sugar" },
-              { k: "Avoiding", v: "Frameworks that need a Slack channel to install" },
+              { k: "Reading", v: "CompTIA Security+ study guide · LHDN e-invoice docs" },
+              { k: "Building", v: "Live engagement invitation platform (React + Netlify)" },
+              { k: "Learning", v: "Steganography & AES-256 · Power BI analytics" },
+              { k: "Drinking", v: "Single-origin pour-over, no sugar" },
+              { k: "Avoiding", v: "Breaking production on a Friday afternoon" },
             ].map((row) => (
               <div key={row.k} className="grid grid-cols-12 gap-4 hairline pt-6">
                 <div className="col-span-4 md:col-span-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">{row.k}</div>
@@ -94,7 +95,7 @@ function Index() {
         </div>
       </section>
 
-      {/* TEASER GRID */}
+      {/* TEASER GRID - unchanged, keep journal & photography */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
         <div className="flex items-end justify-between mb-10">
           <h2 className="font-display text-5xl md:text-7xl leading-none">Wander a little.</h2>
@@ -107,7 +108,7 @@ function Index() {
             </div>
             <div className="mt-4 flex justify-between items-baseline">
               <h3 className="font-display text-3xl italic">Work →</h3>
-              <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Selected projects, 2019–now</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Selected projects, 2025–now</span>
             </div>
           </Link>
           <Link to="/journal" className="col-span-12 md:col-span-5 group block">

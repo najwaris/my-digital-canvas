@@ -11,7 +11,7 @@ export const Route = createFileRoute("/journal")({
     meta: [
       { title: "Journal — Photographs, scribbles & UIs" },
       { name: "description", content: "A loose archive of photos, sketches, and design experiments." },
-      { property: "og:title", content: "Journal — Kiran Noor" },
+      { property: "og:title", content: "Journal — Najwa Aris" },
       { property: "og:description", content: "Photographs, scribbles, and design experiments." },
     ],
   }),
