@@ -18,7 +18,7 @@ const projects = [
     year: "2025",
     name: "Live Engagement Invitation",
     role: "Freelance Front-end Developer",
-    blurb: "Designed and deployed a fully responsive digital invitation card. Features: countdown timer, RSVP form, photo gallery, Google Maps embed, and mobile-first layout. Built for a real client and used by 150+ guests.",
+    blurb: "Designed and deployed a fully responsive digital invitation card for a real client. Features include a countdown timer, RSVP form, photo gallery, Google Maps embed, and mobile-first layout. Used by 150+ guests. Tech stack: React, HTML/CSS, JavaScript, Netlify.",
     tags: ["React", "HTML/CSS", "JS", "Netlify"],
     link: "https://tyrafoundfahmi.netlify.app"
   },
@@ -26,38 +26,47 @@ const projects = [
     year: "2025",
     name: "Steganography Document Feature",
     role: "Full Stack Developer (GenSE Sdn. Bhd.)",
-    blurb: "Implemented AES-256 + SHA-256 encrypted watermarking inside PDFs for SDIP system. Ensured document authenticity and tamper resistance using LSB embedding.",
-    tags: ["Java", "Steganography", "AES-256", "SHA-256"]
+    blurb: "Built a secure encrypted watermarking system for PDF documents using AES-256 encryption with SHA-256 hashing and LSB steganography embedding. Ensured document authenticity, tamper resistance, and traceability of AI-generated PDFs for the Aura-AI system and SDIP system.",
+    tags: ["PHP", "Steganography", "AES-256", "SHA-256"]
   },
   {
     year: "2024",
     name: "IoT Air Quality Monitor",
     role: "Academic Project",
-    blurb: "ESP32-based system tracking temperature, humidity, and gas (MQ2). Real-time MQTT transmission to GCP/V-One. Triggers buzzer + LEDs when thresholds exceeded.",
+    blurb: "Built an ESP32-based IoT system monitoring temperature, humidity (DHT11), and gas levels (MQ2). Implemented real-time MQTT data transmission to GCP and V-One cloud platforms. Triggers onboard buzzer and LED alerts when thresholds are exceeded.",
     tags: ["C++", "ESP32", "MQTT", "GCP"]
   },
   {
     year: "2023",
     name: "E‑commerce for Farmers",
     role: "Front-end Lead",
-    blurb: "React-based platform supporting UN SDG-2 & SDG-12. Eliminated middlemen between farmers and buyers. Designed in Figma.",
+    blurb: "Led a team to build a React-based e-commerce platform supporting UN SDG-2 (Zero Hunger) and SDG-12 (Responsible Consumption). Eliminated middlemen between farmers and buyers. Designed the full interface in Figma.",
     tags: ["React", "Figma", "CSS3"]
+  },
+  {
+    year: "2023",
+    name: "Digital Watermarking System",
+    role: "Final Year Project",
+    blurb: "Developed a secure invisible watermarking system combining steganography and cryptography. Used AES-256 encryption with SHA-256 hashing for integrity checks, and LSB algorithm for embedding. Features image sharing via Outlook Desktop. Won Bronze at PIXEL 2025 USM.",
+    tags: ["Python, Steganography", "AES-256", "SHA-256", "LSB"]
   },
 ];
 
 const timeline = [
-  { period: "2025 — present", title: "Full Stack Developer", place: "GenSE Sdn. Bhd." },
-  { period: "2024 — 2025", title: "Front-end Development Intern", place: "MOABI PLT" },
-  { period: "2021 — 2025", title: "B.Sc. Computer Science (Infrastructure)", place: "Universiti Sains Malaysia · CGPA 3.38" },
-  { period: "2025", title: "Freelance Engagement Invitation", place: "tyrafoundfahmi.netlify.app" },
-  { period: "2025", title: "CompTIA Security+ Training", place: "Iverson Associates" },
+  { period: "Aug 2025 — Present", title: "Full Stack Developer", place: "GenSE Sdn. Bhd. · Implemented steganography features, UI upgrades, automated testing" },
+  { period: "2025", title: "Personal Project: e-Invitation", place: "tyrafoundfahmi.netlify.app · 150+ guests" },
+  { period: "2025", title: "CompTIA Security+ Training", place: "Iverson Associates Sdn Bhd" },
+  { period: "2025", title: "Power BI Analytics Training", place: "Iverson Associates Sdn Bhd" },
+  { period: "2021 — 2025", title: "B.Sc. Computer Science (Computing Infrastructure)", place: "Universiti Sains Malaysia · Psychology Minor · CGPA 3.38 · Dean's List (2 Semesters)" },
+  { period: "March 2024 — Aug 2024", title: "Front-end Development Intern", place: "MOABI PLT · Integrated REST APIs, resolved 50+ UI bugs, maintained 90% design accuracy" },
+  { period: "2024", title: "Google UX Design Foundations", place: "Google" },
 ];
 
 function WorkPage() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-20 pb-24">
+      <section className="container pt-20 pb-24">
         <div className="text-xs uppercase tracking-[0.3em] text-ember mb-6">§ Work</div>
         <h1 className="font-display text-6xl md:text-9xl leading-[0.9] tracking-tighter max-w-5xl">
           Front-end, security, and a <em className="italic">little</em> bit of steganography.
@@ -65,10 +74,10 @@ function WorkPage() {
       </section>
 
       {/* Project list */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
+      <section className="container pb-24">
         <div className="hairline" />
         {projects.map((p) => (
-          <article key={p.name} className="grid grid-cols-12 gap-4 py-10 border-b border-rule group hover:bg-secondary/30 transition-colors -mx-6 md:-mx-12 px-6 md:px-12">
+          <article key={p.name} className="grid grid-cols-12 gap-4 py-10 border-b border-rule group hover:bg-secondary/30 transition-colors">
             <div className="col-span-2 md:col-span-1 text-xs uppercase tracking-[0.25em] text-muted-foreground pt-3">{p.year}</div>
             <div className="col-span-10 md:col-span-5">
               <h3 className="font-display text-4xl md:text-5xl">
@@ -92,8 +101,8 @@ function WorkPage() {
         ))}
       </section>
 
-      {/* Timeline - now matches your real history */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-24">
+      {/* Timeline */}
+      <section className="container py-24">
         <div className="grid grid-cols-12 gap-6 md:gap-10">
           <div className="col-span-12 md:col-span-4">
             <div className="text-xs uppercase tracking-[0.3em] text-ember mb-4">§ Timeline</div>

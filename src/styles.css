@@ -69,16 +69,23 @@
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
   body {
+    min-height: 100vh;
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-mono);
     font-feature-settings: "ss01", "ss02";
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    touch-action: manipulation;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.02em;
+  }
+  img, picture, video, canvas, svg {
+    max-width: 100%;
+    display: block;
   }
   ::selection { background: var(--ember); color: var(--paper); }
 }
@@ -112,5 +119,22 @@
   @keyframes reveal {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+  /* Responsive helpers for mobile navigation and container sizing */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    .container { max-width: 1400px; padding-left: 3rem; padding-right: 3rem; }
+  }
+
+  .mobile-nav {
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(6px);
   }
 }

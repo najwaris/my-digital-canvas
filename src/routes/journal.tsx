@@ -23,7 +23,7 @@ function JournalPage() {
     <div className="min-h-screen">
       <Nav />
 
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-20 pb-16">
+      <section className="container pt-20 pb-16">
         <div className="text-xs uppercase tracking-[0.3em] text-ember mb-6">§ Journal</div>
         <h1 className="font-display text-6xl md:text-9xl leading-[0.9] tracking-tighter">
           Things found <em className="italic">in the margins.</em>
@@ -36,7 +36,7 @@ function JournalPage() {
       </section>
 
       {/* PHOTOGRAPHY */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
+      <section className="container pb-24">
         <div className="flex items-end justify-between mb-8 hairline pt-6">
           <h2 className="font-display text-3xl italic">Photographs</h2>
           <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Pl. 01 — 03</span>
@@ -63,7 +63,7 @@ function JournalPage() {
 
       {/* SCRIBBLES */}
       <section className="bg-secondary/50 py-24 border-y border-rule">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-6 md:gap-10">
+        <div className="container grid grid-cols-12 gap-6 md:gap-10">
           <div className="col-span-12 md:col-span-5">
             <div className="text-xs uppercase tracking-[0.3em] text-ember mb-4">§ Scribbles</div>
             <h2 className="font-display text-5xl md:text-6xl leading-[0.95]">
@@ -88,7 +88,7 @@ function JournalPage() {
       </section>
 
       {/* UI EXPERIMENTS */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-24">
+      <section className="container py-24">
         <div className="grid grid-cols-12 gap-6 md:gap-10">
           <div className="col-span-12 md:col-span-4">
             <div className="text-xs uppercase tracking-[0.3em] text-ember mb-4">§ Figma</div>

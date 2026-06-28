@@ -20,7 +20,7 @@ function Index() {
       <Nav />
 
       {/* HERO */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-16 md:pt-28 pb-24">
+      <section className="container pt-16 md:pt-28 pb-24">
         <div className="grid grid-cols-12 gap-6 md:gap-10">
           <div className="col-span-12 md:col-span-7 reveal">
             <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
@@ -33,9 +33,9 @@ function Index() {
               <br />problems.
             </h1>
             <p className="mt-10 max-w-md text-sm leading-relaxed text-muted-foreground">
-              I'm Najwa — a computer science graduate based in Selangor. I build
-              front-end interfaces, dabble in steganography, and occasionally
-              take photos on 35mm. This is a record of those things.
+              I'm Najwa — a Computer Science graduate from Universiti Sains Malaysia with a CGPA of 3.38 and Dean's List recognition.
+              I build front-end interfaces, integrate secure steganography into systems, and occasionally shoot 35mm film.
+              This is a record of those things.
             </p>
             <div className="mt-10 flex items-center gap-6 text-xs uppercase tracking-[0.2em]">
               <Link to="/work" className="px-5 py-3 bg-ink text-paper hover:bg-ember transition-colors">
@@ -70,7 +70,7 @@ function Index() {
       </section>
 
       {/* CURRENTLY */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-32">
+      <section className="container py-24 md:py-32">
         <div className="grid grid-cols-12 gap-6 md:gap-10">
           <div className="col-span-12 md:col-span-4">
             <div className="text-xs uppercase tracking-[0.3em] text-ember mb-4">§ 01 — Currently</div>
@@ -80,10 +80,10 @@ function Index() {
           </div>
           <div className="col-span-12 md:col-span-7 md:col-start-6 grid gap-8">
             {[
-              { k: "Reading", v: "CompTIA Security+ study guide · LHDN e-invoice docs" },
-              { k: "Building", v: "Live engagement invitation platform (React + Netlify)" },
-              { k: "Learning", v: "Steganography & AES-256 · Power BI analytics" },
-              { k: "Drinking", v: "Single-origin pour-over, no sugar" },
+              { k: "Reading", v: "CompTIA Security+ study guide" },
+              { k: "Building", v: "Steganography-powered document integrity features (AES-256 + SHA-256)" },
+              { k: "Learning", v: "Advanced UX design principles || Creating website using Canva " },
+              { k: "Working", v: "Full Stack Developer at GenSE Sdn. Bhd." },
               { k: "Avoiding", v: "Breaking production on a Friday afternoon" },
             ].map((row) => (
               <div key={row.k} className="grid grid-cols-12 gap-4 hairline pt-6">
@@ -95,8 +95,8 @@ function Index() {
         </div>
       </section>
 
-      {/* TEASER GRID - unchanged, keep journal & photography */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pb-24">
+      {/* TEASER GRID */}
+      <section className="container pb-24">
         <div className="flex items-end justify-between mb-10">
           <h2 className="font-display text-5xl md:text-7xl leading-none">Wander a little.</h2>
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground">04 sections</div>
@@ -108,10 +108,10 @@ function Index() {
             </div>
             <div className="mt-4 flex justify-between items-baseline">
               <h3 className="font-display text-3xl italic">Work →</h3>
-              <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Selected projects, 2025–now</span>
+              <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Selected projects, 2023–2025</span>
             </div>
           </Link>
-          <Link to="/journal" className="col-span-12 md:col-span-5 group block">
+          {/* <Link to="/journal" className="col-span-12 md:col-span-5 group block">
             <div className="overflow-hidden bg-secondary">
               <img src={scribble} alt="Journal" width={1024} height={1024} loading="lazy" className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 mix-blend-multiply" />
             </div>
@@ -119,7 +119,7 @@ function Index() {
               <h3 className="font-display text-3xl italic">Journal →</h3>
               <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Photos, scribbles, UIs</span>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </section>
 

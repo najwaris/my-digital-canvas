@@ -18,7 +18,7 @@ function AboutPage() {
   return (
     <div className="min-h-screen">
       <Nav />
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 pt-20 pb-24">
+      <section className="container pt-20 pb-24">
         <div className="grid grid-cols-12 gap-6 md:gap-10">
           <div className="col-span-12 md:col-span-7">
             <div className="text-xs uppercase tracking-[0.3em] text-ember mb-6">§ About</div>
@@ -27,18 +27,29 @@ function AboutPage() {
             </h1>
             <div className="mt-12 space-y-6 text-base leading-relaxed text-muted-foreground max-w-xl">
               <p>
-                I'm Nurul Najwa — a computer science graduate from Universiti Sains Malaysia (CGPA 3.38, Dean's List).
-                My final year project combined steganography and cryptography (AES‑256 + LSB embedding) to create an
-                invisible watermarking system. It won Bronze at PIXEL 2025.
+                I'm Nurul Najwa binti Mat Aris — a Computer Science graduate from Universiti Sains Malaysia,
+                where I earned a CGPA of 3.38 and made the Dean's List for two semesters. My degree focused on
+                Computing Infrastructure with a minor in Psychology, giving me a unique blend of technical and
+                human-centered design thinking.
               </p>
               <p>
-                I've interned as a front-end developer at MOABI PLT, where I integrated REST APIs, resolved 50+ UI bugs,
-                and maintained 90% design accuracy from Figma prototypes. Currently I'm a full-stack developer at GenSE,
-                adding secure document features and password strength checkers.
+                My final year project combined steganography and cryptography — I built an invisible watermarking
+                system using AES‑256 encryption with SHA‑256 hashing, embedded via the LSB algorithm.
+                The project won Bronze at PIXEL 2025 USM and included image sharing functionality via Outlook Desktop.
               </p>
               <p>
-                Outside of work I shoot 35mm film, read about security vulnerabilities, and drink pour-over coffee.
-                I'm also training for CompTIA Security+ (2025) and learning Power BI analytics.
+                I interned as a front-end developer at MOABI PLT, where I integrated REST APIs documented in Swagger,
+                achieved a 90% API integration success rate, resolved 50+ front-end bugs, and maintained 90% design
+                accuracy from Figma prototypes across 20+ responsive web pages using Angular, Bootstrap, and RxJS.
+              </p>
+              <p>
+                Currently, I'm a Full Stack Developer at GenSE Sdn. Bhd., where I implement secure steganography-based
+                encrypted document features, upgrade user interfaces, develop automated testing scripts with Laravel Dusk,
+                and build document integrity features that embed encrypted hidden metadata into AI-generated PDFs.
+              </p>
+              <p>
+                Outside of work, I shoot 35mm film, read about security vulnerabilities, drink pour-over coffee,
+                and continuously expand my skills — currently training for CompTIA Security+ and Power BI analytics.
               </p>
             </div>
 
@@ -47,7 +58,7 @@ function AboutPage() {
                 { k: "Based in", v: "Selangor, Malaysia" },
                 { k: "Born", v: "2002" },
                 { k: "Degree", v: "B.Sc. CS (Infrastructure)" },
-                // { k: "Available", v: "Q3 2026" },
+                { k: "Languages", v: "Malay · English" },
               ].map((m) => (
                 <div key={m.k}>
                   <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">{m.k}</div>
@@ -69,7 +80,7 @@ function AboutPage() {
 
       {/* CONTACT */}
       <section className="bg-ink text-paper py-24">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-12 gap-6">
+        <div className="container grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-8">
             <div className="text-xs uppercase tracking-[0.3em] text-ember mb-6">§ Contact</div>
             <h2 className="font-display text-5xl md:text-8xl leading-[0.9]">
